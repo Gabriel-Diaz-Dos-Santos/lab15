@@ -35,7 +35,7 @@ class MyApp:
        	    self.up.bind("<Button-1>", self.upClicked)
        	    
     	    self.down = Button(self.myContainer1)
-       	    self.down.configure(t ext="down", background= "blue")
+       	    self.down.configure(text="down", background= "blue")
        	    self.down.grid(row=0,column=2)
        	    self.down.bind("<Button-1>", self.downClicked)
 
@@ -113,8 +113,9 @@ class MyApp:
                 else:
                     return False
                     
-                
+                global target
 		global drawpad
+                global player
                 x1,y1,x2,y2 = drawpad.coords(Canvas)
                 targetx1, targety1, targetx2, targety2 = drawpad.coords(Cavas)
                 if targetx1 < x1 and targetx2 > x2 and targety1 < y1 and targety2 > y2:
